@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Código secreto</title>
+</head>
+ 
+<body style="text-align:center; font-family:sans-serif; background-color: grey;">
+ 
+  <h2>Observa la imagen 👇</h2>
+ 
+ 
+  <img src="ima.png" alt="pista" width="600">
+ 
+<br>
+ 
+<audio id="miAudio">
+<source src="My Project.mp3" type="audio/mpeg">
+</audio>
+ 
+<button onclick="document.getElementById('miAudio').play()">
+    Reproducir
+</button>
+ 
+ 
+  <p>Introduce el número según los animales que escuches:</p>
+ 
+  <!-- INPUT -->
+<input type="text" id="codigo" placeholder="Código">
+<button onclick="check()">Enviar</button>
+ 
+  <!-- CONTENIDO OCULTO -->
+<div id="secreto" style="display:none; margin-top:20px;">
+    🎉🎉 MUY BIEN!! tu primer número es el 7, para conseguir el siguiente debes dirigirte hacia la izquierda mirado a la pantalla.
+</div>
+ 
+  <script>
+    function check() {
+      const codigo = document.getElementById("codigo").value;
+ 
+      if (codigo === "427") {
+        document.getElementById("secreto").style.display = "block";
+      } else {
+        alert("Código incorrecto");
+      }
+    }
+</script>
+ 
+</body>
+</html>
